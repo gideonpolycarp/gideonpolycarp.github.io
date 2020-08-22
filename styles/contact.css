@@ -1,0 +1,317 @@
+/* =========================================
+									@fontface 
+========================================== */
+@font-face{
+	font-family: 'Ubuntulight';
+	src: url('../fonts/Ubuntu/Ubuntu-Light.ttf');
+}
+@font-face{
+	font-family: 'Ubuntubold';
+	src: url('../fonts/Ubuntu/Ubuntu-Bold.ttf');
+}
+@font-face{
+	font-family: 'Ubuntuitalic';
+	src: url('../fonts/Ubuntu/Ubuntu-Italic.ttf');
+}
+@font-face{
+	font-family: 'Ubunturegular';
+	src: url('../fonts/Ubuntu/Ubuntu-Regular.ttf');
+}
+
+
+/* ======================================
+											Reset
+======================================= */
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+	font-family: 'Ubuntulight';
+}
+* {
+  box-sizing: border-box;
+}
+
+
+.loader{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background: url(".../img/loader1.gif") no-repeat center center ;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.loader img{
+  height: 15%;
+  width: 30%
+}
+
+.disappear{
+  animation: fadeOut 1s linear 2s forwards;
+}
+@keyframes fadeOut{
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+/* =================================÷======
+                  NAVBAR
+======================÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷÷ */
+.navbar{
+  background: rgba(34,139,34,0.7);
+  z-index: 9;
+  width: 100%;
+}
+.navbar .navbar-brand,
+.navbar .navbar-toggler .fas{
+  color: #fff;
+}
+.navbar-nav .nav-item > .nav-link{
+  color: #fff;
+}
+.navbar-nav .nav-item > .nav-link.active{
+  color: forestgreen;
+  background: #fff;
+}
+.navbar .collapse .navbar-nav > .nav-item > .nav-link:hover{
+  color: forestgreen;
+  background: #fff;
+}
+@media screen and (max-width: 576px){
+   .navbar-nav > .nav-item{
+     text-align: center;
+   }
+}
+
+
+.contact{
+    margin-top: 9em;
+  }
+  .get_in_touch{
+    display: flex;
+  }
+  .get_in_touch > div{
+    margin-right: 38px;
+  }
+  .get_in_touch .G_body h3{
+    font-family: 'Ubuntubold';
+  }
+  .get_in_touch .G_body p{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: #848a86;
+  }
+  .get_in_touch .G_body li{
+    list-style: none;
+    display: inline;
+  }
+  .get_in_touch .img_sec img{
+    width: 250px;
+    height: 150px;
+  }
+  @media (max-width: 576px) {
+    .contact {
+      margin-top: 5em;
+    }
+    .get_in_touch{
+      flex-direction: column;
+    }
+    .get_in_touch .G_body{
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+    .get_in_touch .G_body p{
+      font-size: 17px;
+    }
+    .get_in_touch .img_sec img{
+      height: 160px;
+    }
+  }
+  
+  
+.contact_form{
+    width: 100%;
+  }
+  .contact_form h4{
+    font-family: 'Ubuntubold';
+  }
+  .contact input,
+  .contact textarea{
+    background: rgba(34,139,34,0.4);
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .contact input::placeholder,
+  .contact textarea::placeholder{
+    color: #fff;
+  }
+  .contact input:focus,
+  .contact textarea:focus{
+    outline: none;
+    border: 1px solid green;
+  }
+  .contact_form input:first-of-type,
+  .contact_form input[type="email"]{
+    width: 49%;
+  }
+  .contact_form input[type="email"]{
+    float: right;
+  }
+  .contact_form textarea{
+    width: 100%;
+    height: 120px;
+  }
+  .contact_form input:last-of-type{
+    background: #fff;
+    color: forestgreen;
+    width: 110px;
+    border: 1px solid forestgreen;
+  }
+  .contact_form input:last-of-type:hover{
+    background: forestgreen;
+    color: #fff;
+    transition: 0.5s
+  }
+  @media (max-width: 576px) {
+    .contact{
+        /*margin: 0;
+        padding: 0;*/
+      }
+      .contact_form{
+        margin: 0;
+      }
+      .contact input{
+        height: 40px;
+      }
+      .contact textarea{
+       
+      }
+    }
+  
+  
+/* =========================================
+                   FOOTER
+========================================== */
+footer{
+  background: forestgreen;
+  display: non
+}
+.footerH{
+  /*background: olivedrab;*/
+  display: flex;
+  width: 95%;
+  margin: auto
+}
+.footerH > div{
+  margin: 3em;
+  flex: 28%;
+}
+.footerH img{
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  margin-left: 2.6em;
+}
+.footerH > div > h1{
+  color: #fff;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.footerH > div > h1:first-of-type{
+  padding-top: 20px;
+}
+.footerH > div > h1:before{
+  content: '-';
+  /*color: #91a0a4;*/
+  color: #fff;
+}
+.footerH > div > h1:after{
+  content: '-';
+  color: #fff;
+}
+.footerH > div p{
+  color: #fff;
+  /*color: #7b8183;*/
+  font-size: 15px;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.footerH > div > ul{
+  margin-left: 0;
+  padding-left: 0;
+}
+.footerH > div > ul li{
+  list-style-type: none;
+  text-align: center;
+  line-height: 30px;
+}
+.footerH > div > ul li a{
+  color: #fff;
+}
+.footer{
+  /*background: olivedrab;*/
+  text-align: center;
+  margin-top: 2em;
+}
+.footer .socials ul{
+   list-style: none;
+   margin-left: 0;padding-left: 0;
+}
+.footer .socials ul li{
+   margin: 0;
+   padding: 20px;
+   display: inline-block;
+   font-size: 1em;
+}
+.footer .socials ul li:first-child i{
+   color: #367adf;
+   background: white;
+   border-radius: 50%;
+   padding: 0; margin: 0;
+}
+.footer .socials ul li:nth-child(2n) i{
+   color: #00bcff;
+}
+.footer .socials ul li:nth-child(3n) i{
+   color: #ffc200;
+}
+.footer .socials ul li:last-child i{
+   color: #f34a21;
+}
+.footer p{
+   font-size: 15px;
+}
+@media screen and (max-width: 470px) {
+  .footerH{
+    flex-flow: column;
+  }
+  .footerH img{
+    margin-left: 3.4em;
+  }
+  .footerH > div p {
+    line-height: 25px;
+  }
+  .footer{
+    font-size: 13px;
+    padding: 1em;
+  }
+}
+
+
+
+
+
